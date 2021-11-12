@@ -143,14 +143,14 @@ async def amialive(e):
             await e.edit(PLUGIN_MESAJLAR['alive'].format(
                 telethon=version.__version__,
                 python=python_version(),
-                owen=OWEN_VERSION,
+                qalaktika=QALAKTİKA_VERSION,
                 plugin=len(CMD_HELP),
                 id=me.id,
                 username='@' + me.username if me.username else f'[{me.first_name}](tg://user?id={me.id})',
                 first_name=me.first_name,
                 last_name=me.last_name if me.last_name else '',
                 mention=f'[{me.first_name}](tg://user?id={me.id})',
-                owensahip = sahipp
+                qalaktikasahip = sahipp
             ))
         else:
             await e.delete()
@@ -158,14 +158,14 @@ async def amialive(e):
                 PLUGIN_MESAJLAR['alive'].text = PLUGIN_MESAJLAR['alive'].text.format(
                     telethon=version.__version__,
                     python=python_version(),
-                    owen=OWEN_VERSION,
+                    qalaktika=QALAKTİKA_VERSION,
                     plugin=len(CMD_HELP),
                     id=me.id,
                     username='@' + me.username if me.username else f'[{me.first_name}](tg://user?id={me.id})',
                     first_name=me.first_name,
                     last_name=me.last_name if me.last_name else '',
                     mention=f'[{me.first_name}](tg://user?id={me.id})',
-                    owensahip = sahipp
+                    qalaktikasahip = sahipp
                 )
             if e.is_reply:
                 await e.respond(PLUGIN_MESAJLAR['alive'], reply_to=e.message.reply_to_msg_id)
@@ -187,8 +187,8 @@ async def asistanalive(ups):
         else:
             hitap = "❤️ Sayın Yöneticim"
         if ren == MYID:
-            OwenVer = str(OWEN_VERSION.replace("v","")) 
-            await ups.reply(f"__{hitap} Şuan Çalışmaktayım\n BotVer: {OWEN_VERSION} !__")
+            qalaktikaVer = str(QALAKTİKA_VERSION.replace("v","")) 
+            await ups.reply(f"__{hitap} Şuan Çalışmaktayım\n BotVer: {QALAKTİKA_VERSION} !__")
         else:
             return
     else:
