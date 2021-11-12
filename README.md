@@ -28,7 +28,7 @@
 
 ### 🇹🇷 Elle Kurulum / Manual Setup 🇺🇲
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/erdewbey/OwenUserBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Emin-ahmedoff/QalaktikaUserBot)
 
 ## 🇹🇷 Bilgilendirme / İnformation 🇺🇲
 ***Herhangi bir istek & şikayet & öneriniz varsa [destek grubuna](https://t.me/OwenSupport) ulaşabilirsiniz.***
