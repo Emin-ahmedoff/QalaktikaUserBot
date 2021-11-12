@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy - ByMisakiMey
+# QalaktikaUserBot - Emin - ehmedoff - ahmedoff
 #
 
 """ UserBot yardım komutu """
@@ -17,11 +17,11 @@ from userbot.events import register
 # ██████ LANGUAGE CONSTANTS ██████ #
 
 from userbot.language import get_value
-LANG = get_value("__owen")
+LANG = get_value("__qalaktika")
 
 # ████████████████████████████████ #
 
-@register(outgoing=True, pattern="^.owen(?: |$)(.*)")
+@register(outgoing=True, pattern="^.qalaktika(?: |$)(.*)")
 async def owen(event):
     """ .owen komutun """
     args = event.pattern_match.group(1).lower()
