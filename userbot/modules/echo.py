@@ -10,53 +10,53 @@ from userbot import MAX_MESSAGE_SIZE_LIMIT, BLACKLIST_CHAT
 from userbot.cmdhelp import CmdHelp
 @register(outgoing=True, pattern="^.addecho ?(.*)")
 async def echo(owen):
-    if owen.fwd_from:
+    if qalaktika.fwd_from:
         return
-    if owen.reply_to_msg_id is not None:
-        reply_msg = await owen.get_reply_message()
+    if qalaktika.reply_to_msg_id is not None:
+        reply_msg = await qalaktika.get_reply_message()
         user_id = reply_msg.sender_id
-        chat_id = owen.chat_id
+        chat_id = qalaktika.chat_id
         try:
             kraken = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
             kraken = Get(kraken)
-            await owen.client(kraken)
+            await qalaktika.client(kraken)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
-            await owen.edit("`Kullanıcı echo ile zaten etkinleştirilmiş`")
+            await qalaktika.edit("`Kullanıcı echo ile zaten etkinleştirilmiş`")
             return
         addecho(user_id, chat_id)
-        await owen.edit("**Selam 👋**")
+        await qalaktika.edit("**Selam 👋**")
     else:
         await event.edit("`Bir kullanıcı yanıtlamak zorundasın`")
 
 
 @register(outgoing=True, pattern="^.rmecho ?(.*)")
-async def echo(Owen):
-    if Owen.fwd_from:
+async def echo(qalaktika):
+    if qalaktika.fwd_from:
         return
-    if Owen.reply_to_msg_id is not None:
-        reply_msg = await Owen.get_reply_message()
+    if qalaktika.reply_to_msg_id is not None:
+        reply_msg = await qalaktika.get_reply_message()
         user_id = reply_msg.sender_id
-        chat_id = Owen.chat_id
+        chat_id = qalaktika.chat_id
         try:
             kraken = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
             kraken = Get(kraken)
-            await Owen.client(kraken)
+            await qalaktika.client(kraken)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
             remove_echo(user_id, chat_id)
-            await Owen.edit("`Kullanıcı için echo durduruldu`")
+            await qalaktika.edit("`Kullanıcı için echo durduruldu`")
         else:
-            await Owen.edit("`Kullanıcı echoya eklenmemiş`")
+            await qalaktika.edit("`Kullanıcı echoya eklenmemiş`")
     else:
-        await Owen.edit("`Mesajlarını echodan çıkarmak için bir mesajı yanıtlamalısın.`")
+        await qalaktika.edit("`Mesajlarını echodan çıkarmak için bir mesajı yanıtlamalısın.`")
 
 
 @register(outgoing=True, pattern="^.elist ?(.*)")
-async def echo(Owen):
-    if Owen.fwd_from:
+async def echo(qalaktika):
+    if qalaktika.fwd_from:
         return
     lsts = get_all_echos()
     if len(lsts) > 0:
@@ -78,25 +78,25 @@ async def echo(Owen):
         )
         url = f"https://nekobin.com/{key}"
         reply_text = f"Echo aktif kullanıcı: [burada]({url})"
-        await Owen.edit(reply_text)
+        await qalaktika.edit(reply_text)
     else:
-        await Owen.edit(output_str)
+        await qalaktika.edit(output_str)
 
 
 @register(incoming=True)
-async def samereply(owen):
-    if owen.chat_id in BLACKLIST_CHAT:
+async def samereply(qalaktika):
+    if qalaktika.chat_id in BLACKLIST_CHAT:
         return
-    if is_echo(owen.sender_id, owen.chat_id):
+    if is_echo(qalaktika.sender_id, qalaktika.chat_id):
         await asyncio.sleep(1)
         try:
             kraken = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
             kraken = Get(kraken)
-            await owen.client(kraken)
+            await qalaktika.client(kraken)
         except BaseException:
             pass
-        if owen.message.text or owen.message.sticker:
-            await owen.reply(owen.message)
+        if owen.message.text or qalaktika.message.sticker:
+            await qalaktika.reply(qalaktika.message)
 
 
 CmdHelp("echo").add_command(
