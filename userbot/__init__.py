@@ -1,11 +1,11 @@
-# Copyright (C) 2021 The OwenProjects Company LLC.
+# Copyright (C) 2021 The QalaktikaProjects Company LLC.
 #
-# Licensed under the OwenProjects Public License, Version 1.c (the "License");
+# Licensed under the QalaktikaProjects Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 #
 
 # Thanks github.com/spechide for creating inline bot support.
-# OwenUserBot - Erdem By - ByMisakiMey
+# QalaktikaUserBot - Emin - ehmedoff
 """ UserBot hazırlanışı. """
 
 import os
@@ -42,12 +42,12 @@ ASYNC_POOL = []
 if CONSOLE_LOGGER_VERBOSE:
     basicConfig(
         level=DEBUG,
-        format="[%(asctime)s - %(levelname)s] - @OwenUserBot : %(message)s",
+        format="[%(asctime)s - %(levelname)s] - @QalaktikaUserBot : %(message)s",
         datefmt='%d-%b-%y %H:%M:%S')
 else:
     basicConfig(
         level=INFO,
-        format="[%(asctime)s - %(levelname)s] - @OwenUserBot : %(message)s",
+        format="[%(asctime)s - %(levelname)s] - @QalaktikaUserBot : %(message)s",
         datefmt='%d-%b-%y %H:%M:%S')
 LOGS = getLogger(__name__)
 
