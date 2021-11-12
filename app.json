@@ -1,6 +1,6 @@
 {
-  "name": "Owen UserBot",
-  "description": "Owen UserBot",
+  "name": "Qalaktika UserBot",
+  "description": "Qalaktika UserBot",
   "logo": "https://i.hizliresim.com/9tep7oz.jpg",
   "keywords": [
     "telegram",
@@ -10,9 +10,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/OwenProjects/OwenUserBot",
-  "website":   "https://t.me/OwenProjects",
-  "success_url": "https://t.me/Owenuserbot",
+  "repository": "https://github.com/Emin-ahmedoff/QalaktikaUserBot",
+  "website":   "https://t.me/QalaktikaProjects",
+  "success_url": "https://t.me/Qalaktikauserbot",
   "stack": "container",
   "env": {
     "API_KEY": {
