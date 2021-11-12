@@ -15,7 +15,7 @@ import requests
 from telethon.tl.types import InputMessagesFilterDocument
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 from telethon.tl.functions.channels import GetMessagesRequest
-from . import BRAIN_CHECKER, LOGS, bot, PLUGIN_CHANNEL_ID, CMD_HELP, LANGUAGE, OWEN_VERSION, PATTERNS, DEFAULT_NAME, BOT_TOKEN
+from . import BRAIN_CHECKER, LOGS, bot, PLUGIN_CHANNEL_ID, CMD_HELP, LANGUAGE, QALAKTİKA_VERSION, PATTERNS, DEFAULT_NAME, BOT_TOKEN
 from .modules import ALL_MODULES
 from .asisstant.modules import ALL_MODULE
 import userbot.modules.sql_helper.mesaj_sql as MSJ_SQL
