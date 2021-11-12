@@ -74,8 +74,8 @@ if not LANGUAGE in ["EN", "TR", "AZ", "UZ", "DEFAULT"]:
     LOGS.info("Bilinmeyen bir dil yazdınız. Bundan dolayı DEFAULT kullanılıyor.")
     LANGUAGE = "DEFAULT"
     
-# Owen versiyon
-OWEN_VERSION = "v4.1"
+# Qalaktika versiyon
+QALAKTİKA_VERSION = "v4.1"
 
 MAX_MESSAGE_SIZE_LIMIT = 4095
 # Telegram API KEY ve HASH
@@ -140,7 +140,7 @@ except ModuleNotFoundError:
     install_pip("randomstuff.py")
     import randomstuff
 
-#Chatbot için Client -- ByMisakiMey
+#Chatbot için Client -- Emin
 RANDOM_STUFF_API_KEY = os.environ.get("RANDOM_STUFF_API_KEY", None)
 if RANDOM_STUFF_API_KEY:
     try:
@@ -157,12 +157,12 @@ AI_LANG = os.environ.get("AI_LANG", 'en')
 STABILITY = sb(os.environ.get("STABILITY", "True")) # 
 
 UPSTREAM_REPO_URL = "https://github.com/Emin-ahmedoff/QalaktikaUserBot.git" #if not STABILITY else https://github.com/erdewbey/OwenUserBot.git Eski Dostum Berce'ye Aittir.
-EMERGENCY = "https://github.com/erdewbey/OwenUserBot.git" # Acil durrum için
+EMERGENCY = "https://github.com/Emin-ahmedoff/QalaktikaUserBot.git" # Acil durrum için
 # Afk mesajların iletilmesi
 AFKILETME = sb(os.environ.get("AFKILETME", "True"))
 
 # SQL Veritabanı
-DB_URI = os.environ.get("DATABASE_URL", "sqlite:///owen.db")
+DB_URI = os.environ.get("DATABASE_URL", "sqlite:///qalaktika.db")
 
 # OCR API key
 OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
@@ -266,7 +266,7 @@ PM_AUTO_BAN_LIMIT = int(os.environ.get("PM_AUTO_BAN_LIMIT", 4))
 SPOTIFY_DC = os.environ.get("SPOTIFY_DC", None)
 SPOTIFY_KEY = os.environ.get("SPOTIFY_KEY", None)
 
-PAKET_ISMI = os.environ.get("PAKET_ISMI", "| 🌃 @OwenUserBot Paketi |")
+PAKET_ISMI = os.environ.get("PAKET_ISMI", "| 🌃 @QalaktikaUserBot Paketi |")
 
 # Userbotu kapatmak için gruplar
 BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
@@ -467,7 +467,7 @@ with bot:
                 veriler = (butonlastir(0, sorted(CMD_HELP)))
                 result = await builder.article(
                     f"Lütfen Sadece .yardım Komutu İle Kullanın",
-                    text=f"**En Gelişmiş UserBot!** [Owen](https://t.me/OwenUserBot) __Çalışıyor...__\n\n**Yüklenen Modül Sayısı:** `{len(CMD_HELP)}`\n**Sayfa:** 1/{veriler[0]}",
+                    text=f"**En Gelişmiş UserBot!** [Qalaktika](https://t.me/QalaktikaUserBot) __Çalışıyor...__\n\n**Yüklenen Modül Sayısı:** `{len(CMD_HELP)}`\n**Sayfa:** 1/{veriler[0]}",
                     buttons=veriler[1],
                     link_preview=False
                 )
@@ -488,9 +488,9 @@ with bot:
 Hesabınızı bot'a çevirebilirsiniz ve bunları kullanabilirsiniz. Unutmayın, siz başkasının botunu yönetemezsiniz! Alttaki GitHub adresinden tüm kurulum detayları anlatılmıştır.""",
                     buttons=[
                         [custom.Button.url("Kanala Katıl", "https://t.me/OwenUserBot"), custom.Button.url(
-                            "Gruba Katıl", "https://t.me/OwenSupport")],
+                            "Gruba Katıl", "https://t.me/QalaktikaSupport")],
                         [custom.Button.url(
-                            "GitHub", "https://github.com/erdewbey/OwenUserBot")]
+                            "GitHub", "https://github.com/Emin-ahmedoff/QalaktikaUserBot")]
                     ],
                     link_preview=False
                 )
@@ -503,7 +503,7 @@ Hesabınızı bot'a çevirebilirsiniz ve bunları kullanabilirsiniz. Unutmayın,
             sayfa = int(event.data_match.group(1).decode("UTF-8"))
             veriler = butonlastir(sayfa, CMD_HELP)
             await event.edit(
-                f"** En Gelişmiş UserBot!** [Owen](https://t.me/OwenUserBot) __Çalışıyor...__\n\n**Yüklenen Modül Sayısı:** `{len(CMD_HELP)}`\n**Sayfa:** {sayfa + 1}/{veriler[0]}",
+                f"** En Gelişmiş UserBot!** [Owen](https://t.me/QalaktikaUserBot) __Çalışıyor...__\n\n**Yüklenen Modül Sayısı:** `{len(CMD_HELP)}`\n**Sayfa:** {sayfa + 1}/{veriler[0]}",
                 buttons=veriler[1],
                 link_preview=False
             )
