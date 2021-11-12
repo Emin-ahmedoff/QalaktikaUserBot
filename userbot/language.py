@@ -24,7 +24,7 @@ for dil in bot.iter_messages(pchannel, filter=InputMessagesFilterDocument):
                 dil.delete()
                 remove(f"./userbot/language/{dil.file.name}")
 
-                if path.isfile("./userbot/language/DEFAULT.owenjson"):
+                if path.isfile("./userbot/language/DEFAULT.qalaktikajson"):
                     LOGS.warn("Varsayılan dil dosyası kullanılıyor...")
                     LANGUAGE_JSON = loads(open(f"./userbot/language/DEFAULT.qalaktikajson", "r").read())
                 else:
