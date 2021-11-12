@@ -49,7 +49,7 @@ if LANGUAGE_JSON == None:
         except JSONDecodeError:
             raise Exception("Invalid json file")
     else:
-        if path.isfile("./userbot/language/DEFAULT.owenjson"):
+        if path.isfile("./userbot/language/DEFAULT.qalaktikajson"):
             LOGS.warn("Varsayılan dil dosyası kullanılıyor...")
             LANGUAGE_JSON = loads(open(f"./userbot/language/DEFAULT.qalaktikajson", "r").read())
         else:
