@@ -1,4 +1,4 @@
-# Owen 
+# qalaktika 
 import os
 from telethon.errors import ChatAdminRequiredError
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -20,9 +20,9 @@ async def fstat(event):
     if event.fwd_from:
         return
     if event.pattern_match.group(1):
-        owen = event.pattern_match.group(1)
+        qalaktika = event.pattern_match.group(1)
     else:
-        owen = ""
+        qalaktika = ""
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         replied_user = await event.client(
@@ -65,10 +65,10 @@ async def info(event):
     if event.fwd_from:
         return
     if event.pattern_match.group(1):
-        owen = event.pattern_match.group(1)
+        qalaktika = event.pattern_match.group(1)
         
     else:
-        owen = ""
+        qalaktika = ""
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         replied_user = await event.client(
@@ -147,10 +147,10 @@ async def fban(event):
     if event.fwd_from:
         return
     if event.pattern_match.group(1):
-        owen = event.pattern_match.group(1)
+        qalaktika = event.pattern_match.group(1)
         
     else:
-        owen = ""
+        qalaktika = ""
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         replied_user = await event.client(
@@ -182,10 +182,10 @@ async def unfban(event):
     if event.fwd_from:
         return
     if event.pattern_match.group(1):
-        owen = event.pattern_match.group(1)
+        qalaktika = event.pattern_match.group(1)
         
     else:
-        owen = ""
+        qalaktika = ""
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         replied_user = await event.client(
@@ -217,10 +217,10 @@ async def feddemote(event):
     if event.fwd_from:
         return
     if event.pattern_match.group(1):
-        owen = event.pattern_match.group(1)
+        qalaktika = event.pattern_match.group(1)
         
     else:
-        owen = ""
+        qalaktika = ""
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         replied_user = await event.client(
@@ -252,10 +252,10 @@ async def fpromode(event):
     if event.fwd_from:
         return
     if event.pattern_match.group(1):
-        owen = event.pattern_match.group(1)
+        qalaktika = event.pattern_match.group(1)
         
     else:
-        owen = ""
+        qalaktika = ""
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         replied_user = await event.client(
