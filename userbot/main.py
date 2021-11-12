@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# Owen UserBot - ErdewBey - ByMisakiMey
+# Qalaktika UserBot - Emin - ehmedoff
 
 """ UserBot başlangıç noktası """
 import importlib
@@ -30,12 +30,12 @@ import userbot.cmdhelp
 import glob
 
 ALIVE_MSG = [
-    "`Userbotunuz çalışıyor ve sana bişey demek istiyor.. Seni seviyorum` **{owensahip}** ❤️ \n Bot Versiyonu: {owen} ",
-    "🎆 `Endişelenme! Seni yanlız bırakmam.` **{owensahip}**, `OwenUserbot çalışıyor.` \n Bot Versiyonu: {owen} ",
-    "`⛈️ Elimden gelenin en iyisini yapmaya hazırım`, **{owensahip}** \n Bot Versiyonu: {owen} ",
-    "✨ `OwenUserBot sahibinin emirlerine hazır...` \n Bot Versiyonu: {owen} ",
-    "`Şuan en gelişmiş userbotun düzenlediği mesajı okuyor olmalısın` **{owensahip}**. \n Bot Versiyonu: {owen} ",
-    "`Benimi Aramıştın ❓ Ben Buradayım Merak Etme` \n Bot Versiyonu: {owen} "
+    "`Userbotunuz çalışıyor ve sana bişey demek istiyor.. Seni seviyorum` **{owensahip}** ❤️ \n Bot Versiyonu: {qalaktika} ",
+    "🎆 `Endişelenme! Seni yanlız bırakmam.` **{qalaktikasahip}**, `QalaktikaUserbot çalışıyor.` \n Bot Versiyonu: {qalaktika} ",
+    "`⛈️ Elimden gelenin en iyisini yapmaya hazırım`, **{owensahip}** \n Bot Versiyonu: {qalaktika} ",
+    "✨ `QalaktikaUserBot sahibinin emirlerine hazır...` \n Bot Versiyonu: {qalaktika} ",
+    "`Şuan en gelişmiş userbotun düzenlediği mesajı okuyor olmalısın` **{qalaktikasahip}**. \n Bot Versiyonu: {qalaktika} ",
+    "`Benimi Aramıştın ❓ Ben Buradayım Merak Etme` \n Bot Versiyonu: {qalaktika} "
 ]
 
 DIZCILIK_STR = [
@@ -151,11 +151,11 @@ def extractCommands(file):
                             KomutStr = Command
                         Komutlar.append(KomutStr)
 
-            # OWENPY
-            Owenpy = re.search('\"\"\"OWENPY(.*)\"\"\"', FileRead, re.DOTALL)
-            if not Owenpy == None:
-                Owenpy = Owenpy.group(0)
-                for Satir in Owenpy.splitlines():
+            # QALAKTİKAPY
+            Qalaktikapy = re.search('\"\"\"QALAKTİKAPY(.*)\"\"\"', FileRead, re.DOTALL)
+            if not Qalaktikapy == None:
+                Qalaktikapy = Qalaktikapy.group(0)
+                for Satir in Qalaktikapy.splitlines():
                     if (not '"""' in Satir) and (':' in Satir):
                         Satir = Satir.split(':')
                         Isim = Satir[0]
@@ -176,10 +176,10 @@ def extractCommands(file):
 try:
     bot.start()
     idim = bot.get_me().id
-    owenbl = requests.get('https://raw.githubusercontent.com/erdewbey/datas/master/blacklist.json').json()
+    qalaktikabl = requests.get('https://raw.githubusercontent.com/erdewbey/datas/master/blacklist.json').json()
     if idim in owenbl:
-        bot.send_message("me", f"`❌ Owen yöneticileri sizi bottan yasakladı! Bot kapatılıyor...`")
-        LOGS.error("Owen yöneticileri sizi bottan yasakladı! Bot kapatılıyor...")
+        bot.send_message("me", f"`❌ Qalaktika yöneticileri sizi bottan yasakladı! Bot kapatılıyor...`")
+        LOGS.error("Qalaktika yöneticileri sizi bottan yasakladı! Bot kapatılıyor...")
         bot.disconnect()
     # ChromeDriver'ı Ayarlayalım #
     try:
@@ -279,12 +279,12 @@ if BOT_TOKEN:
 os.system("clear")
 
 LOGS.info("+===========================================================+")
-LOGS.info("|                     ✨Owen Userbot✨                       |")
+LOGS.info("|                     ✨Qalaktika Userbot✨                       |")
 LOGS.info("+==============+==============+==============+==============+")
 LOGS.info("|                                                            |")
 LOGS.info("Botunuz çalışıyor! Herhangi bir sohbete .alive yazarak Test edin."
-          " Yardıma İhtiyacınız varsa, Destek grubumuza gelin t.me/OwenSupport")
-LOGS.info(f"Bot versiyonunuz: Owen ==> {OWEN_VERSION}")
+          " Yardıma İhtiyacınız varsa, Destek grubumuza gelin t.me/QalaktikaSupport")
+LOGS.info(f"Bot versiyonunuz: Qalaktika ==> {QALAKTİKA_VERSION}")
 
 """
 if len(argv) not in (1, 3, 4):
