@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy
+# QalaktikaUserBot - Emin - ehmedoff
 #
 
 """ Tüm modülleri yükleyen init dosyası """
