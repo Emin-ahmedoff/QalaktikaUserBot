@@ -69,7 +69,7 @@
     },
     "UPSTREAM_REPO_URL": {
       "description": "Fork sağlamanız durumunda repo URL'nizi buraya ekleyin. Varsayılan olarak kendi repo adresimiz eklidir.",
-      "value": "https://github.com/erdewbey/OwenUserBot",
+      "value": "https://github.com/Emin-ahmedoff/QalaktikaUserBot",
       "required": true
     },
     "COUNTRY": {
@@ -142,7 +142,7 @@
       "description": ".yt komutu için YouTube Veri API'sı keyidir. https://console.cloud.google.com adresinden alın.",
       "required": false
     },
-    "OCR_OWEN_API_KEY": {
+    "OCR_QALAKTİKA_API_KEY": {
       "description": ".ocr komutu için OCR API Key. https://ocr.owen/ocrapi adresinden alın.",
       "required": false
     },
