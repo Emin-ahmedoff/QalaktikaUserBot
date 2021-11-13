@@ -80,7 +80,7 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) \
             + str(stderr.decode().strip())
 
-        await event.edit(f"=== {OWEN_VERSION} === "
+        await event.edit(f"=== {QALAKTİKA_VERSION} === "
                          f"`{LANG['VERSION']}: "
                          f"{verout}"
                          "` \n"
@@ -89,7 +89,7 @@ async def bot_ver(event):
                          "`")
     else:
         await event.edit(
-            "Owen Dinlemede!!!"
+            "Qalaktika Dinlemede!!!"
         )
 
 
