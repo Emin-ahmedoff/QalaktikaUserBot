@@ -23,7 +23,8 @@ LANG = get_value("__qalaktika")
 
 @register(outgoing=True, pattern="^.qalaktika(?: |$)(.*)")
 async def owen(event):
-    """ .owen komutun """
+# .qalaktika yazan zaman gələn modul siyahısı.
+
     args = event.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
