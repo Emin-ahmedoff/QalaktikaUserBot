@@ -196,7 +196,7 @@ async def auto_accept(event):
                                     id=id,
                                     username=username,
                                     mention=mention,
-                                    qalaktikasahip=owen_sahip,
+                                    qalaktikasahip=qalaktika_sahip,
                                     first_name=first_name,
                                     last_name=last_name
                                 ) and message.from_id == self_user.id:
@@ -368,7 +368,7 @@ async def blockpm(block):
     else:
         if block.chat_id in BRAIN_CHECKER:
             await block.edit(
-                "`Oups, Hata! Beni Bağışla Ama Bunu OwenUserBot Yetkilisine Yapamam!!`"
+                "`Oups, Hata! Beni Bağışla Ama Bunu QalaktikaUserBot Yetkilisine Yapamam!!`"
             )
             return
 
