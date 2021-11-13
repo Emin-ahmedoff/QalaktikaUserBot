@@ -176,7 +176,7 @@ def extractCommands(file):
 try:
     bot.start()
     idim = bot.get_me().id
-    qalaktikabl = requests.get('https://raw.githubusercontent.com/erdewbey/datas/master/blacklist.json').json()
+    qalaktikabl = requests.get('https://github.com/Emin-ahmedoff/QalaktikaUserBot/raw/master/blacklist.json').json()
     if idim in qalaktikabl:
         bot.send_message("me", f"`❌ Qalaktika yöneticileri sizi bottan yasakladı! Bot kapatılıyor...`")
         LOGS.error("Qalaktika yöneticileri sizi bottan yasakladı! Bot kapatılıyor...")
@@ -192,10 +192,34 @@ try:
 
     # PLUGIN MESAJLARI AYARLIYORUZ
     PLUGIN_MESAJLAR = {}
-    ORJ_PLUGIN_MESAJLAR = {"alive": f"{str(choice(ALIVE_MSG))}", "afk": f"`{str(choice(AFKSTR))}`", "kickme": f"`{str(choice(KICKME_MSG))}`", "pm": str(UNAPPROVED_MSG), "dızcı": str(choice(DIZCILIK_STR)), "cv": str(choice(CV_MSG)), "ban": "🌀 {mention}`, Banlandı!!`", "mute": "🌀 {mention}`, sessize alındı!`", "approve": "`Merhaba` {mention}`, artık bana mesaj gönderebilirsin!`", "disapprove": "{mention}`, artık bana mesaj gönderemezsin!`", "block": "{mention}`, bunu bana mecbur bıraktın! Seni engelledim!`"}
+    ORJ_PLUGIN_MESAJLAR = {
+        "alive": f"{str(choice(ALIVE_MSG))}", 
+        "afk": f"`{str(choice(AFKSTR))}`", 
+        "kickme": f"`{str(choice(KICKME_MSG))}`", 
+        "pm": str(UNAPPROVED_MSG), 
+        "dızcı": str(choice(DIZCILIK_STR)), 
+        "cv": str(choice(CV_MSG)), 
+        "ban": "🌀 {mention}`, Banlandı!!`", 
+        "mute": "🌀 {mention}`, sessize alındı!`", 
+        "approve": "`Merhaba` {mention}`, artık bana mesaj gönderebilirsin!`", 
+        "disapprove": "{mention}`, artık bana mesaj gönderemezsin!`", 
+        "block": "{mention}`, bunu bana mecbur bıraktın! Seni engelledim!`"}
 
 
-    PLUGIN_MESAJLAR_TURLER = ["alive", "afk", "kickme", "pm", "dızcı", "cv", "ban", "mute", "approve", "disapprove", "block"]
+    PLUGIN_MESAJLAR_TURLER = [
+        "alive", 
+        "afk", 
+        "kickme", 
+        "pm", 
+        "dızcı", 
+        "cv", 
+        "ban", 
+        "mute", 
+        "approve", 
+        "disapprove", 
+        "block"
+    ]
+    
     for mesaj in PLUGIN_MESAJLAR_TURLER:
         dmsj = MSJ_SQL.getir_mesaj(mesaj)
         if dmsj == False:
