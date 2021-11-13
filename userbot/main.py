@@ -177,7 +177,7 @@ try:
     bot.start()
     idim = bot.get_me().id
     qalaktikabl = requests.get('https://raw.githubusercontent.com/erdewbey/datas/master/blacklist.json').json()
-    if idim in owenbl:
+    if idim in qalaktikabl:
         bot.send_message("me", f"`❌ Qalaktika yöneticileri sizi bottan yasakladı! Bot kapatılıyor...`")
         LOGS.error("Qalaktika yöneticileri sizi bottan yasakladı! Bot kapatılıyor...")
         bot.disconnect()
