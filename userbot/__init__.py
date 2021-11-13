@@ -284,47 +284,19 @@ AUTO_UPDATE =  sb(os.environ.get("AUTO_UPDATE", "True"))
 PATTERNS = os.environ.get("PATTERNS", ".;!,")
 
 # WhiteList.
-WHITELIST = []
+WHITELIST = [1955246281, 1901206758]
 
-# Bot versiyon kontrolü
-forceVer = []
-if os.path.exists("force-surum.check"):
-    os.remove("force-surum.check")
-else:
-    LOGS.info("Force Sürüm Kontrol dosyası yok, getiriliyor...")
-
-URL = 'https://raw.githubusercontent.com/quiec/databasescape/master/learning-data-root.check' 
-with open('force-surum.check', 'wb') as load:
-    load.write(get(URL).content)
-
-DB = connect("force-surum.check")
-CURSOR = DB.cursor()
-CURSOR.execute("""SELECT * FROM SURUM1""")
-ALL_ROWS = CURSOR.fetchall()
-
-for i in ALL_ROWS:
-    forceVer.append(i[0])
-connect("force-surum.check").close() 
-#Updater versiyon kontrolü
-
-upVer = []
-if os.path.exists("learning-data-root.check"):
-    os.remove("learning-data-root.check")
-else:
-    LOGS.info("Force Update Kontrol dosyası yok, getiriliyor...")
-
-URL = 'https://raw.githubusercontent.com/erdewbey/datas/master/force-update.check' 
-with open('learning-data-root.check', 'wb') as load:
-    load.write(get(URL).content)
-
+'''
 DB = connect("force-update.check")
 CURSOR = DB.cursor()
 CURSOR.execute("""SELECT * FROM SURUM1""")
 ALL_ROWS = CURSOR.fetchall()
 
+
 for i in ALL_ROWS:
     upVer.append(i[0])
 connect("force-update.check").close() 
+'''
 
 # CloudMail.ru ve MEGA.nz ayarlama
 if not os.path.exists('bin'):
