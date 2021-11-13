@@ -51,7 +51,7 @@ twitter_scraper>=0.4.4
 telethon==1.23.0
 telethon-session-sqlalchemy>=0.2.16
 telegraph
-numpy>=1.21.4
+numpy
 moviepy>=1.0.3
 youtube-dl>=2021.6.6
 emoji-country-flag
