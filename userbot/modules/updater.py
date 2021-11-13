@@ -54,7 +54,7 @@ async def update_requirements():
   
 @register(outgoing=True, pattern=r"^\.update(?: |$)(.*)")
 async def upstream(ups):
-    QalaktikaVer = int(OWEN_VERSION.split(".")[1])
+    QalaktikaVer = int(QALAKTİKA_VERSION.split(".")[1])
     if QalaktikaVer < upVer:
      await ups.edit(f"**Sakın Yanlış Anlama Bazı Kısıtlamalar Yapılmalıdır Botunu Sağlıksız Güncellemen Botuna Zarar Verir**.\n\nDurum: İzin Verilmiyor. \n[Son Güncelleme Raporu](https://t.me/QalaktikaUserBot/77)") #CR vERMEYEN NE OLSUN - ahmedoff
      return
@@ -112,7 +112,7 @@ async def upstream(ups):
     if conf != "now" and not force_update:
         QalaktikaVer = int(QALAKTIKA_VERSION.split(".")[1])
         if QalaktikaVer < upVer:
-          await ups.edit(f"**Lütfen owen yöneticileri izin vermeden güncelleme yapmaya çalışma\n Botun bozulabilir\n Güncelleme kanalım :** @OwenUserBot")
+          await ups.edit(f"**Lütfen qalaktika yöneticileri izin vermeden güncelleme yapmaya çalışma\n Botun bozulabilir\n Güncelleme kanalım :** @OwenUserBot")
           return
         changelog_str = LANG['WAS_UPDATE'].format(ac_br, changelog)
         if len(changelog_str) > 4096:
