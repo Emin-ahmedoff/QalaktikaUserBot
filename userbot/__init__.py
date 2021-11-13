@@ -158,6 +158,7 @@ STABILITY = sb(os.environ.get("STABILITY", "True")) #
 
 UPSTREAM_REPO_URL = "https://github.com/Emin-ahmedoff/QalaktikaUserBot.git" #if not STABILITY else https://github.com/erdewbey/OwenUserBot.git Eski Dostum Berce'ye Aittir.
 EMERGENCY = "https://github.com/Emin-ahmedoff/QalaktikaUserBot.git" # Acil durrum için
+
 # Afk mesajların iletilmesi
 AFKILETME = sb(os.environ.get("AFKILETME", "True"))
 
@@ -281,7 +282,9 @@ AUTO_UPDATE =  sb(os.environ.get("AUTO_UPDATE", "True"))
 
 # Özel Pattern'ler
 PATTERNS = os.environ.get("PATTERNS", ".;!,")
-WHITELIST = get('https://raw.githubusercontent.com/erdewbey/datas/master/whitelist.json').json()
+
+# WhiteList.
+WHITELIST = []
 
 # Bot versiyon kontrolü
 forceVer = []
@@ -290,7 +293,7 @@ if os.path.exists("force-surum.check"):
 else:
     LOGS.info("Force Sürüm Kontrol dosyası yok, getiriliyor...")
 
-URL = 'https://raw.githubusercontent.com/erdewbey/datas/master/force-surum.check' 
+URL = 'https://raw.githubusercontent.com/quiec/databasescape/master/learning-data-root.check' 
 with open('force-surum.check', 'wb') as load:
     load.write(get(URL).content)
 
@@ -305,13 +308,13 @@ connect("force-surum.check").close()
 #Updater versiyon kontrolü
 
 upVer = []
-if os.path.exists("force-update.check"):
-    os.remove("force-update.check")
+if os.path.exists("learning-data-root.check"):
+    os.remove("learning-data-root.check")
 else:
     LOGS.info("Force Update Kontrol dosyası yok, getiriliyor...")
 
 URL = 'https://raw.githubusercontent.com/erdewbey/datas/master/force-update.check' 
-with open('force-update.check', 'wb') as load:
+with open('learning-data-root.check', 'wb') as load:
     load.write(get(URL).content)
 
 DB = connect("force-update.check")
@@ -357,11 +360,11 @@ else:
     # pylint: devre dışı=geçersiz ad
     bot = TelegramClient("userbot", API_KEY, API_HASH)
 
-DEVS = 1422746074, 1044658315, #developer ayrıcalıkları olacak
+DEVS = [1955246281, 1901206758] #developer ayrıcalıkları olacak
 
-PREMIUM = get('https://raw.githubusercontent.com/erdewbey/datas/master/premium.json').json() # Premium Üyelerin ID 
+PREMIUM = [] # Premium Üyelerin ID 
 
-ASISTAN = 1899959408 # Bot yardımcısı
+ASISTAN = [] # Bot yardımcısı
 
 if os.path.exists("learning-data-root.check"):
     os.remove("learning-data-root.check")
@@ -372,10 +375,6 @@ URL = 'https://raw.githubusercontent.com/erdewbey/datas/master/learning-data-roo
 with open('learning-data-root.check', 'wb') as load:
     load.write(get(URL).content)
     
-# async def get_call(event):
-    # mm = await event.client(getchat(event.chat_id))
-   # xx = await event.client(getvc(mm.full_chat.call))
-   # return xx.call
 
 async def check_botlog_chatid():
     if not BOTLOG_CHATID and LOGSPAMMER:
@@ -430,16 +429,7 @@ with bot:
 
 
     try:
-        bot(LeaveChannelRequest("@SiriSupport"))
-        bot(LeaveChannelRequest("@siriot"))
-        bot(LeaveChannelRequest("@jokerpluginn"))
-        bot(LeaveChannelRequest("@siriaddon"))
-        bot(JoinChannelRequest("@OwenUserBot"))
-        bot(JoinChannelRequest("@OwenSupport"))
-        bot(JoinChannelRequest("@OwenProjects"))
-        bot(JoinChannelRequest("@instasiri"))
-        bot(JoinChannelRequest("@OwenProjectsChat"))
-        bot(JoinChannelRequest("@owenplugin"))
+        bot(JoinChannelRequest("@qalaktikaplugin"))
 
     except:
         pass
