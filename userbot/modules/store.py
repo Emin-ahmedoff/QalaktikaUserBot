@@ -109,12 +109,12 @@ async def sinstall(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Qalaktika Plugin Mağazası**\n__Versiyon 1.0__\n\n**✅ Modül Başarıyla Yüklendi!**\n__ℹ️ Modülün Kullanımını Öğrenmek İçin__ `.owen {cmdhelp}` __Yazınız.__')
+                return await event.edit(f'**Qalaktika Plugin Mağazası**\n__Versiyon 1.0__\n\n**✅ Modül Başarıyla Yüklendi!**\n__ℹ️ Modülün Kullanımını Öğrenmek İçin__ `.qalaktika {cmdhelp}` __Yazınız.__')
             else:
                 dosyaAdi = plugin.file.name.replace('.py', '')
                 extractCommands(dosya)
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Qalaktika Plugin Mağazası**\n__Versiyon 1.0__\n\n**✅ Modül Başarıyla Yüklendi!**\n__ℹ️ Modülün Kullanımını Öğrenmek İçin__ `.owen {dosyaAdi}` __Yazınız.__')
+                return await event.edit(f'**Qalaktika Plugin Mağazası**\n__Versiyon 1.0__\n\n**✅ Modül Başarıyla Yüklendi!**\n__ℹ️ Modülün Kullanımını Öğrenmek İçin__ `.qalaktika {dosyaAdi}` __Yazınız.__')
 
 userbot.cmdhelp.CmdHelp('store').add_command(
     'store', LANG['P1'], LANG['P2']
