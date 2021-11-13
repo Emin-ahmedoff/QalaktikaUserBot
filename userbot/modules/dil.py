@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy
+# QalaktikaUserBot - Emin - ahmedoff
 
 from userbot.cmdhelp import CmdHelp
 from userbot import PLUGIN_CHANNEL_ID, CMD_HELP
@@ -39,7 +39,7 @@ async def dil(event):
             try:
                 dosya = loads(open(dosya, "r").read())
             except JSONDecodeError:
-                return await event.edit("`Lütfen geçerli bir` **OwenJSON** `dosyası verin!`")
+                return await event.edit("`Lütfen geçerli bir` **QalaktikaJSON** `dosyası verin!`")
 
             await event.edit(f"`{dosya['LANGUAGE']}` `dili yükleniyor...`")
             pchannel = await event.client.get_entity(PLUGIN_CHANNEL_ID)
@@ -56,15 +56,15 @@ async def dil(event):
         await event.edit("`Dil dosyası bilgileri getiriliyor... Lütfen bekleyiniz.`")
         if event.is_reply:
             reply = await event.get_reply_message()
-            if ((len(reply.file.name.split(".")) >= 1) and (not reply.file.name.split(".")[1] == "owenjson")):
-                return await event.edit("`Lütfen geçerli bir` **OwenJSON** `dosyası verin!`")
+            if ((len(reply.file.name.split(".")) >= 1) and (not reply.file.name.split(".")[1] == "Qalaktikajson")):
+                return await event.edit("`Lütfen geçerli bir` **QalaktikaJSON** `dosyası verin!`")
 
             dosya = await reply.download_media()
 
             try:
                 dosya = loads(open(dosya, "r").read())
             except JSONDecodeError:
-                return await event.edit("`Lütfen geçerli bir` **OwenJSON** `dosyası verin!`")
+                return await event.edit("`Lütfen geçerli bir` **QalaktikaJSON** `dosyası verin!`")
 
             await event.edit(
                 f"**Dil: **`{dosya['LANGUAGE']}`\n"
