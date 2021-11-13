@@ -1,5 +1,5 @@
 # Credit Vermeyi Unutmayın Zsten Açık Kaynaklı Kodlar
-#Owenuserbot-ErdewBey-ixelizm-ByMisakiMey
+#Qalaktikauserbot-Emin-ahmedoff
 
 from telethon import events 
 import asyncio 
@@ -15,7 +15,7 @@ LANG = get_value("cv")
 
 # ████████████████████████████████ #
 
-@owen(incoming=True, pattern="^.cv")
+@qalaktika(incoming=True, pattern="^.cv")
 async def cvhazırlama(ups):
     if ups.fwd_from:
         return
@@ -27,7 +27,7 @@ async def cvhazırlama(ups):
         if ren == MYID:
             await ups.reply(f"{PLUGIN_MESAJLAR['cv']}")
 		        
-@owen(outgoing=True, pattern="^.mycv")
+@qalaktika(outgoing=True, pattern="^.mycv")
 async def komut(e):
         await e.edit(f"{PLUGIN_MESAJLAR['cv']}")
 
