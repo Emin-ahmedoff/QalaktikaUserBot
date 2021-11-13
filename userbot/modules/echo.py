@@ -9,7 +9,7 @@ from userbot.modules.sql_helper.echo_sql import addecho, get_all_echos, is_echo,
 from userbot import MAX_MESSAGE_SIZE_LIMIT, BLACKLIST_CHAT
 from userbot.cmdhelp import CmdHelp
 @register(outgoing=True, pattern="^.addecho ?(.*)")
-async def echo(owen):
+async def echo(qalaktika):
     if qalaktika.fwd_from:
         return
     if qalaktika.reply_to_msg_id is not None:
