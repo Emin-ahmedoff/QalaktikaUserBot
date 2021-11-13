@@ -176,7 +176,7 @@ def extractCommands(file):
 try:
     bot.start()
     idim = bot.get_me().id
-    qalaktikabl = requests.get('https://github.com/Emin-ahmedoff/QalaktikaUserBot/raw/master/blacklist.json').json()
+    qalaktikabl = []
     if idim in qalaktikabl:
         bot.send_message("me", f"`❌ Qalaktika yöneticileri sizi bottan yasakladı! Bot kapatılıyor...`")
         LOGS.error("Qalaktika yöneticileri sizi bottan yasakladı! Bot kapatılıyor...")
