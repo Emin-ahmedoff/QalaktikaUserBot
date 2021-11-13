@@ -3,7 +3,7 @@
 
 from telethon import events 
 import asyncio 
-from userbot.events import register as owen
+from userbot.events import register as qalaktika
 from userbot import (MYID)
 from userbot.main import PLUGIN_MESAJLAR
 from userbot.cmdhelp import CmdHelp
