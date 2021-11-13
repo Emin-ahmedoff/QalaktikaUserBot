@@ -95,7 +95,7 @@ async def samereply(qalaktika):
             await qalaktika.client(kraken)
         except BaseException:
             pass
-        if owen.message.text or qalaktika.message.sticker:
+        if qalaktika.message.text or qalaktika.message.sticker:
             await qalaktika.reply(qalaktika.message)
 
 
