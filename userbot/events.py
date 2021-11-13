@@ -18,7 +18,7 @@ from time import gmtime, strftime
 from traceback import format_exc
 from telethon import events
 
-from userbot import bot, BOTLOG_CHATID, LOGSPAMMER, PATTERNS, QALAKTİKA_VERSION, ForceVer
+from userbot import bot, BOTLOG_CHATID, LOGSPAMMER, PATTERNS, QALAKTİKA_VERSION
 
 
 def register(**args):
@@ -52,11 +52,6 @@ def register(**args):
 
     def decorator(func):
         async def wrapper(check):
-            QalaktikaVer = int(QALAKTİKA_VERSION.split(".")[1])
-            if ForceVer > QalaktikaVer:
-                await check.edit(f"`🌈 Botu acilen güncellemen lazım! Bu sürüm artık kullanılamıyor..`\n\n__🥺 Sorunu çözmek için__ `.update now` __yazmalısın!__")
-                return
-
             if not LOGSPAMMER:
                 send_to = check.chat_id
             else:
@@ -69,7 +64,7 @@ def register(**args):
                 return
              
             if groups_only and not check.is_group:
-                await check.respond("`⛔ Bunun bir grup olduğunu sanmıyorum. Bu plugini bir grupta dene! `")
+                await check.respond("`⛔ Bunun bir grup olduğunu sanmıyorum. Bu plugini bir grupta dene!`")
                 return
 
             try:
@@ -137,10 +132,10 @@ def register(**args):
                         except:
                             pass
                     await check.client.send_file(send_to,
-                                                 "error.log",
+                                                 "poxuçıxdı.log",
                                                  caption=text)
 
-                    remove("error.log")
+                    remove("poxuçıxdı.log")
             else:
                 pass
         if not disable_edited:
