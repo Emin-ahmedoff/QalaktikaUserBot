@@ -1,4 +1,4 @@
-# OwenProjects Erdem Bey ByMisakimey
+# QalaktikaProjects Emin - ahmedoff
 
 import os
 import re
@@ -14,13 +14,13 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 Heroku = heroku3.from_key(HEROKU_APIKEY)
 heroku_api = "https://api.heroku.com"
-owensudo = os.environ.get("SUDO_ID", None)
+qalaktikasudo = os.environ.get("SUDO_ID", None)
 
 @register(outgoing=True,
           pattern=r"^.sudoekle")
 async def addsudo(event):
     await event.edit("`Kullanıcı sudo olarak ayarlanıyor`...")
-    owen = "SUDO_ID"
+    qalaktika = "SUDO_ID"
     if HEROKU_APPNAME is not None:
         app = Heroku.app(HEROKU_APPNAME)
     else:
@@ -30,15 +30,15 @@ async def addsudo(event):
     if event is None:
         return
     try:
-        owentext = await get_user(event)
+        qalaktikatext = await get_user(event)
     except Exception:
         await event.edit("`Lütfen bir kullanıcının mesajına cevap verin.`")
-    if owensudo:
-        yenisudo = f"{owensudo} {owentext}"
+    if qalaktikasudo:
+        yenisudo = f"{qalaktikasudo} {qalaktikatext}"
     else:
-        yenisudo = f"{owentext}"
+        yenisudo = f"{qalaktikatext}"
     await event.edit("`Kullanıcı sudo olarak ayarlandı.👌` \n`Botunuz yeniden başlatılıyor...`")
-    heroku_var[owen] = yenisudo
+    heroku_var[qalaktika] = yenisudo
 
 
 async def get_user(event):
@@ -52,8 +52,8 @@ async def get_user(event):
             replied_user = await event.client(
                 GetFullUserRequest(previous_message.sender_id)
             )
-    owentext = replied_user.user.id
-    return owentext
+    qalaktikatext = replied_user.user.id
+    return qalaktikatext
 
 @register(outgoing=True,
           pattern=r"^.sudosil")
@@ -66,10 +66,10 @@ async def sudosil(event):
   if event.is_reply:
     id = (await event.get_reply_message()).sender_id
     ad = (await bot.get_entity(id)).first_name
-    op = re.search(str(id), str(owensudo))
+    op = re.search(str(id), str(qalaktikasudo))
     if op:
       i = ""
-      esudo = owensudo.split(" ")
+      esudo = qalaktikasudo.split(" ")
       esudo.remove(str(id))
       i += str(esudo)
       x = i.replace("[", "")
@@ -94,9 +94,9 @@ async def get_user(event):
             replied_user = await event.client(
                 GetFullUserRequest(previous_message.sender_id)
             )
-    owent = replied_user.user.id
-    return owent
+    qalaktikat = replied_user.user.id
+    return qalaktikat
     
 @register(incoming=True, from_users=SUDO_ID, pattern="^.salive$")
 async def _(q):
-    await q.client.send_message(q.chat_id,"`Sudom ❤️ OwenUserBot Çalışıyor...`")
+    await q.client.send_message(q.chat_id,"`Sudom ❤️ QalaktikaUserBot Çalışıyor...`")
