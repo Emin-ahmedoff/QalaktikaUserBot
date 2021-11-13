@@ -1,12 +1,12 @@
 {
 
-    "__OWENJSON__": true,
+    "__QALAKTİKAJSON__": true,
     
     "LANGUAGE": "Hindi",
 
     "LANGCODE": "in",
 
-    "AUTHOR": "Erdem Bey / Sam Pandey ",
+    "AUTHOR": "Emin / ehmedoff ",
 
     "STRINGS": {
 
@@ -62,15 +62,15 @@
 
             "PLUG_DELETED": "`Plugin deleted successfully!` '**You need to restart operations to be implemented.**",
 
-            "OWEN_PLUGIN_CAPTION": "This is a plugin of [Owen](https://t.me/OwenUserBot)."
+            "QALAKTİKA_PLUGIN_CAPTION": "This is a plugin of [Owen](https://t.me/OwenUserBot)."
 
         },
 
-        "__owen": {
+        "__QALAKTİKA": {
 
-            "NEED_PLUGIN": "✨Please provide a Owen module name.",
+            "NEED_PLUGIN": "✨Please provide a Qalaktika module name.",
 
-            "NEED_MODULE": "𝙊𝙬𝙚𝙣 𝑼𝒔𝒆𝒓𝑩𝒐𝒕 𝑴𝒐𝒅𝒖𝒍 𝑯𝒆𝒍𝒑𝒆𝒓\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n⚡Please specify which Owen module you want help for !!\nUsage: .owen <module name>"
+            "NEED_MODULE": "QALAKTİKA 𝑼𝒔𝒆𝒓𝑩𝒐𝒕 𝑴𝒐𝒅𝒖𝒍 𝑯𝒆𝒍𝒑𝒆𝒓\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n⚡Please specify which Owen module you want help for !!\nUsage: .owen <module name>"
 
         },
 
