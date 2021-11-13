@@ -100,8 +100,8 @@ async def info(event):
 async def fedinfo(event):
     if event.fwd_from:
         return
-    owen = event.pattern_match.group(1)
-    if owen == "" and not event.reply_to_msg_id:
+    qalaktika = event.pattern_match.group(1)
+    if qalaktika == "" and not event.reply_to_msg_id:
         async with event.client.conversation(chat) as conv:
             try:
                 await conv.send_message("/fedinfo")
