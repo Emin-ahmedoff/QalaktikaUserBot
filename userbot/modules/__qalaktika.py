@@ -22,7 +22,7 @@ LANG = get_value("__qalaktika")
 # ████████████████████████████████ #
 
 @register(outgoing=True, pattern="^.qalaktika(?: |$)(.*)")
-async def owen(event):
+async def qalaktika(event):
 # .qalaktika yazan zaman gələn modul siyahısı.
 
     args = event.pattern_match.group(1).lower()
