@@ -31,7 +31,7 @@ async def fstat(event):
         kullanıcı = str(replied_user.user.id)
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/fedstat " + kullanıcı + " " + owen)
+                await conv.send_message("/fedstat " + kullanıcı + " " + qalaktika)
                 fedstat = await conv.get_response()
                 if "file" in fedstat.text:
                     await fedstat.click(0)
@@ -46,7 +46,7 @@ async def fstat(event):
     else:
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/fedstat " + owen)
+                await conv.send_message("/fedstat " + qalaktika)
                 fedstat = await conv.get_response()
                 if "file" in fedstat.text:
                     await fedstat.click(0)
@@ -87,7 +87,7 @@ async def info(event):
     else:
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/info " + owen)
+                await conv.send_message("/info " + qalaktika)
                 audio = await conv.get_response()
                 await event.client.forward_messages(event.chat_id, audio)
                 await event.delete()
@@ -114,7 +114,7 @@ async def fedinfo(event):
     else:
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/fedinfo " + owen)
+                await conv.send_message("/fedinfo " + qalaktika)
                 fedinfo = await conv.get_response()
                 await event.client.forward_messages(event.chat_id, fedinfo)
                 await event.delete()
@@ -169,7 +169,7 @@ async def fban(event):
     else:
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/fban " + owen)
+                await conv.send_message("/fban " + qalaktika)
                 audio = await conv.get_response()
                 await event.client.forward_messages(event.chat_id, audio)
                 await event.delete()
@@ -204,7 +204,7 @@ async def unfban(event):
     else:
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/unfban " + owen)
+                await conv.send_message("/unfban " + qalaktika)
                 audio = await conv.get_response()
                 await event.client.forward_messages(event.chat_id, audio)
                 await event.delete()
@@ -239,7 +239,7 @@ async def feddemote(event):
     else:
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/unfban " + owen)
+                await conv.send_message("/unfban " + qalaktika)
                 audio = await conv.get_response()
                 await event.client.forward_messages(event.chat_id, audio)
                 await event.delete()
@@ -274,7 +274,7 @@ async def fpromode(event):
     else:
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/fpromode " + owen)
+                await conv.send_message("/fpromode " + qalaktika)
                 audio = await conv.get_response()
                 await event.client.forward_messages(event.chat_id, audio)
                 await event.delete()
