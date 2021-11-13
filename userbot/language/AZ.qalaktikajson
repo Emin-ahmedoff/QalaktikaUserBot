@@ -1,5 +1,5 @@
 {
-    "__OWENJSON__": true,
+    "_QALAKTIKAJSON__": true,
     "LANGUAGE": "Azərbaycanca",
     "LANGCODE": "az",
     "AUTHOR": "OwenProjects",
@@ -38,7 +38,7 @@
             "P5": "'store random 10'",
             "P6": "'Plugin kanalından Plugini yükləyər.'"
         },
-        "__owen": {
+        "__qalaktika": {
             "NEED_PLUGIN": "💻 Xahiş edirəm bir Owen modulu adı qeyd edin.",
             "NEED_MODULE": "Owen UserBot Modül List \n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n⚡ Xahiş edirəm hansı Owen modulu üçün yardım istədiyinizi qeyd edin !!\nİstifadəsi: .owen <modul adı>"
         },
