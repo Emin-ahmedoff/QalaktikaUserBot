@@ -9,10 +9,10 @@
 from datetime import datetime
 from telethon import events
 from userbot import OWNER_ID
-from userbot.asisstant.events import owen
+from userbot.asisstant.events import qalaktika
 import asyncio
 
-@owen(incoming=True, from_users=OWNER_ID, pattern="^/ping")
+@qalaktika(incoming=True, from_users=OWNER_ID, pattern="^/ping")
 async def evnt (e):
     start = datetime.now()
     msg = await e.reply("Pong!")
