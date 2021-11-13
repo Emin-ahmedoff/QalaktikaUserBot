@@ -50,8 +50,7 @@ spotify_token>=1.0.0
 twitter_scraper>=0.4.4
 telethon==1.23.0
 telethon-session-sqlalchemy>=0.2.16
-telegraph>=2.1.0
-tgcalls>=2.0.0
+telegraph
 numpy>=1.21.4
 moviepy>=1.0.3
 youtube-dl>=2021.6.6
